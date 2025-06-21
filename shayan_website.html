@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shayan Pathan</title>
+  <style>
+    @keyframes glow {
+      0% { text-shadow: 0 0 5px #e50914; }
+      50% { text-shadow: 0 0 20px #e50914, 0 0 30px #ff3333; }
+      100% { text-shadow: 0 0 5px #e50914; }
+    }
+
+    @keyframes typewriter {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Courier New', Courier, monospace;
+      background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+      color: #f2f2f2;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    .header {
+      background-color: #111;
+      padding: 30px 20px;
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      color: #e50914;
+      margin: 0;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      animation: glow 2s infinite;
+    }
+
+    .profile-img {
+      width: 180px;
+      border-radius: 50%;
+      border: 3px solid #e50914;
+      margin-top: 20px;
+      box-shadow: 0 0 25px rgba(255, 0, 0, 0.6);
+    }
+
+    .bio {
+      padding: 40px 20px;
+      background-color: #1e1e1e;
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.6;
+      border-left: 5px solid #e50914;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 2px solid #e50914;
+      width: 0;
+      animation: typewriter 6s steps(60) forwards;
+    }
+
+    .contact {
+      background-color: #0d0d0d;
+      padding: 30px 20px;
+      margin-top: 30px;
+    }
+
+    .contact p, .contact a {
+      font-size: 1rem;
+      color: #bbbbbb;
+      margin: 8px 0;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      color: #e50914;
+    }
+
+    .social-icons {
+      margin-top: 20px;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      margin: 0 10px;
+      color: #f2f2f2;
+      font-size: 24px;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #e50914;
+    }
+
+    $1
+      animation: pulse 1.5s infinite;
+      box-shadow: 0 0 10px #e50914;}
+
+    .contact-button:hover {
+      background-color: #a80000;
+    }
+
+    .logo {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      width: 50px;
+      opacity: 0.5;
+    }
+
+    .counter {
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 10px;
+    }
+      @keyframes pulse {
+      0% { transform: scale(1); box-shadow: 0 0 10px #e50914; }
+      50% { transform: scale(1.05); box-shadow: 0 0 20px #ff3333; }
+      100% { transform: scale(1); box-shadow: 0 0 10px #e50914; }
+    }
+  </style>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const audio = new Audio('https://www.fesliyanstudios.com/play-mp3/387');
+      audio.volume = 0.3;
+      audio.play().catch(e => console.log('Autoplay failed:', e));
+
+      // Visitor counter (local only)
+      let visits = localStorage.getItem('visitCount') || 0;
+      visits++;
+      localStorage.setItem('visitCount', visits);
+      document.getElementById('visit-count').innerText = `Visitor count: ${visits}`;
+    });
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Godfather_logo.svg/2560px-Godfather_logo.svg.png" alt="Mafia Logo" class="logo">
+  <div class="header">
+    <h1>Shayan Pathan</h1>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Al_Pacino_in_The_Godfather_II.jpg/440px-Al_Pacino_in_The_Godfather_II.jpg" alt="Mafia Boss Vibe" class="profile-img">
+  </div>
+
+  <div class="bio">
+    Born in the shadows, rising to rule. A 16-year-old visionary from Aurangabad with the heart of a lion. Footballer by passion, kingmaker by mindset. Power, loyalty, and legacy.
+  </div>
+
+  <div class="contact">
+    <p>📞 9823537313</p>
+    <p>📧 pathanshayan617@gmail.com</p>
+    <p>📍 Aurangabad, Maharashtra</p>
+    <p>🎂 Born on 29 June 2009</p>
+    <p>📷 Instagram: <a href="https://instagram.com/_shayan_pathan" target="_blank">@_shayan_pathan</a></p>
+
+    <a class="contact-button" href="https://wa.me/919823537313" target="_blank">Contact Me on WhatsApp</a>
+
+    <div class="social-icons">
+      <a href="https://instagram.com/_shayan_pathan" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/919823537313" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="mailto:pathanshayan617@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+
+    <div class="counter" id="visit-count">Visitor count: ...</div>
+  </div>
+<audio id="hover-sound" src="https://cdn.pixabay.com/download/audio/2022/03/22/audio_9297a6db59.mp3?filename=gun-gunshot-1-185120.mp3" preload="auto"></audio>
+
+<script>
+  const contactButton = document.querySelector('.contact-button');
+  const hoverSound = document.getElementById('hover-sound');
+
+  if (contactButton && hoverSound) {
+    contactButton.addEventListener('mouseenter', () => {
+      hoverSound.currentTime = 0;
+      hoverSound.play();
+    });
+  }
+</script>
+</body>
+</html>
